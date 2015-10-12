@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_SMZiom2PEeWGi5jN4fE-Kg" iD="_SMZioW2PEeWGi5jN4fE-Kg">
+  <pools xmi:type="bpmn:Pool" xmi:id="_SNXzAW2PEeWGi5jN4fE-Kg" iD="_SNXzAG2PEeWGi5jN4fE-Kg" name="Start">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__aJ0gG2iEeW6zpQBljhuSQ" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__aJ0gW2iEeW6zpQBljhuSQ" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_SNgV4W2PEeWGi5jN4fE-Kg" iD="_SNgV4G2PEeWGi5jN4fE-Kg" name="Task" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_RcL2kW2jEeW6zpQBljhuSQ"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_Yux6cG2jEeW6zpQBljhuSQ"/>
+    </vertices>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_niFMIW2iEeW6zpQBljhuSQ" iD="_niFMIG2iEeW6zpQBljhuSQ" name="Data Procss">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_RcW1sW2jEeW6zpQBljhuSQ" iD="_RcW1sG2jEeW6zpQBljhuSQ" name="thisMSG1Request">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RcW1sm2jEeW6zpQBljhuSQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RcW1s22jEeW6zpQBljhuSQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RcdjYW2jEeW6zpQBljhuSQ" key="defaultDeclarationName" value="thisMSG1Request"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RchNwG2jEeW6zpQBljhuSQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/Data_Procss}MSG1Request"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_RcexgG2jEeW6zpQBljhuSQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RcfYkG2jEeW6zpQBljhuSQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RcgmsG2jEeW6zpQBljhuSQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_Yu3aAW2jEeW6zpQBljhuSQ" iD="_Yu3aAG2jEeW6zpQBljhuSQ" name="thisMSG1Response">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Yu3aAm2jEeW6zpQBljhuSQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yu3aA22jEeW6zpQBljhuSQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yu7EYW2jEeW6zpQBljhuSQ" key="defaultDeclarationName" value="thisMSG1Response"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yu-uwW2jEeW6zpQBljhuSQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/Data_Procss}MSG1Response"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_Yu8SgG2jEeW6zpQBljhuSQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Yu9goG2jEeW6zpQBljhuSQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yu-uwG2jEeW6zpQBljhuSQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_WVXgIG2wEeW6zpQBljhuSQ" iD="_WVO9QG2wEeW6zpQBljhuSQ" name="GrowthMetric">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WVXgIW2wEeW6zpQBljhuSQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WVXgIm2wEeW6zpQBljhuSQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WVXgI22wEeW6zpQBljhuSQ" key="douri" value="project:///Metrics/People.xvar?xvartype={http://test.com/xvar/example}GrowthMetric"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WVcYoG2wEeW6zpQBljhuSQ" key="defaultDeclarationName" value="GrowthMetric"/>
+      </eAnnotations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_tW0x8W2iEeW6zpQBljhuSQ" iD="_tW0x8G2iEeW6zpQBljhuSQ" outgoingEdges="_U32sMW2jEeW6zpQBljhuSQ" incomingEdges="_TeN_wW2jEeW6zpQBljhuSQ" name="Insert in database" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_RcCsoW2jEeW6zpQBljhuSQ" iD="_RcCsoG2jEeW6zpQBljhuSQ" associations="_RcexgG2jEeW6zpQBljhuSQ" outgoingEdges="_TeN_wW2jEeW6zpQBljhuSQ" name="MSG1" activityType="EventStartMessage">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_RcL2kW2jEeW6zpQBljhuSQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_U3vXcW2jEeW6zpQBljhuSQ" iD="_U3vXcG2jEeW6zpQBljhuSQ" associations="_Yu8SgG2jEeW6zpQBljhuSQ" incomingEdges="_U32sMW2jEeW6zpQBljhuSQ" name="End Event" activityType="EventEndMessage">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_Yux6cG2jEeW6zpQBljhuSQ"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_TeN_wW2jEeW6zpQBljhuSQ" iD="_TeN_wG2jEeW6zpQBljhuSQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_U32sMW2jEeW6zpQBljhuSQ" iD="_U32sMG2jEeW6zpQBljhuSQ"/>
+  </pools>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_RcL2kW2jEeW6zpQBljhuSQ" iD="_RcL2kG2jEeW6zpQBljhuSQ" source="_SNgV4W2PEeWGi5jN4fE-Kg" target="_RcCsoW2jEeW6zpQBljhuSQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gWFIYG22EeW3YucNamlwMg" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gWFIYW22EeW3YucNamlwMg" key="douri" value="project:///Schemas/message.xsd?xsdtype={http://www.example.org/message}msg"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_Yux6cG2jEeW6zpQBljhuSQ" iD="_YuxTYG2jEeW6zpQBljhuSQ" source="_U3vXcW2jEeW6zpQBljhuSQ" target="_SNgV4W2PEeWGi5jN4fE-Kg"/>
+</bpmn:BpmnDiagram>

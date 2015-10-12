@@ -1,0 +1,13 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<wsdl:definitions xmlns:People="http://test.com/xvar/example" xmlns:diag="http://thisdiagram" xmlns:Data_Procss="http://thisdiagram/Data_Procss" xmlns:Start="http://thisdiagram/Start" xmlns:tns="http://www.example.org/message" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" targetNamespace="http://thisdiagram" bpdm:version="6000089" bpdm:canid="_SMZioW2PEeWGi5jN4fE-Kg" bpdm:displayName="diag">
+  <pnlk:partnerLinkType name="Data_ProcssAndStart" bpdm:poolOneId="_niFMIG2iEeW6zpQBljhuSQ" bpdm:poolOneIsExecutable="true" bpdm:poolOneName="Data Procss" bpdm:poolTwoId="_SNXzAG2PEeWGi5jN4fE-Kg" bpdm:poolTwoIsExecutable="false" bpdm:poolTwoName="Start">
+    <pnlk:role name="Data_Procss_for_Start" portType="Data_Procss:ForStart" bpdm:thisPoolId="_niFMIG2iEeW6zpQBljhuSQ">
+      <wsdl:portType name="ForStart">
+        <wsdl:operation name="MSG1" bpdm:canid="_RcCsoG2jEeW6zpQBljhuSQ._SNgV4G2PEeWGi5jN4fE-Kg._U3vXcG2jEeW6zpQBljhuSQ.">
+          <wsdl:input message="Data_Procss:MSG1Request" name="MSG1" bpdm:canid="_RcL2kG2jEeW6zpQBljhuSQ" bpdm:senderId="_SNgV4G2PEeWGi5jN4fE-Kg" bpdm:receiverId="_RcCsoG2jEeW6zpQBljhuSQ" bpdm:senderName="Task" bpdm:receiverName="MSG1" bpdm:receiverPoolId="_niFMIG2iEeW6zpQBljhuSQ" bpdm:dataobjectPointer="project:///Schemas/message.xsd?xsdtype={http://www.example.org/message}msg" bpdm:bodyPartElemName="MSG1Request" bpdm:bodyPartElemType="{http://www.example.org/message}msg"></wsdl:input>
+          <wsdl:output message="Data_Procss:MSG1Response" name="MSG1Response" bpdm:canid="_YuxTYG2jEeW6zpQBljhuSQ" bpdm:senderId="_U3vXcG2jEeW6zpQBljhuSQ" bpdm:receiverId="_SNgV4G2PEeWGi5jN4fE-Kg" bpdm:senderName="End Event" bpdm:receiverName="Task" bpdm:receiverPoolId="_SNXzAG2PEeWGi5jN4fE-Kg" bpdm:bodyPartElemName="MSG1Response" bpdm:bodyPartElemType="xs:string"></wsdl:output>
+        </wsdl:operation>
+      </wsdl:portType>
+    </pnlk:role>
+  </pnlk:partnerLinkType>
+</wsdl:definitions>

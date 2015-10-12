@@ -1,0 +1,73 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:Start="http://thisdiagram/Start" xmlns:People="http://test.com/xvar/example" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://www.example.org/message" xmlns:this="http://thisdiagram/Data_Procss" xmlns:diag="http://thisdiagram" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Data_Procss">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Start" bpdm:prefix="Start" bpdm:comment="contrib=&apos;partner-pool:///_SNXzAG2PEeWGi5jN4fE-Kg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://test.com/xvar/example" bpdm:prefix="People" bpdm:comment="contrib=&apos;project:///Metrics/People.xvar"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.example.org/message" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///Schemas/message.xsd"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Data_Procss" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_SNXzAG2PEeWGi5jN4fE-Kg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
+            <wsdl:portType name="ForStart">
+                <wsdl:operation name="MSG1" bpdm:source="partner-pool:///_SNXzAG2PEeWGi5jN4fE-Kg">
+                    <wsdl:input message="this:MSG1Request" name="MSG1"/>
+                    <wsdl:output message="this:MSG1Response" name="MSG1Response"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <bpel:binding name="CanonicBindingForStart" type="this:ForStart" bpdm:isSynchronized="true"/>
+            <xs:element name="MSG1Request" type="tns:msg" bpdm:source="partner-pool:///_SNXzAG2PEeWGi5jN4fE-Kg"/>
+            <wsdl:message name="MSG1Request" bpdm:source="partner-pool:///_SNXzAG2PEeWGi5jN4fE-Kg">
+                <wsdl:part name="body" element="this:MSG1Request"/>
+            </wsdl:message>
+            <xs:element name="MSG1Response" type="xs:string" bpdm:source="partner-pool:///_SNXzAG2PEeWGi5jN4fE-Kg"/>
+            <wsdl:message name="MSG1Response" bpdm:source="partner-pool:///_SNXzAG2PEeWGi5jN4fE-Kg">
+                <wsdl:part name="body" element="this:MSG1Response"/>
+            </wsdl:message>
+        </bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_SNXzAG2PEeWGi5jN4fE-Kg" bpdm:label="Start"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Schemas/message.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Metrics/People.xvar"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Metrics/People.xvar.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="Data Procss" bpdm:ID="_niFMIG2iEeW6zpQBljhuSQ">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="data_ProcssAndStartPlkVar" partnerLinkType="diag:Data_ProcssAndStart" myRole="Data_Procss_for_Start" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForStart" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Data_Procss/Start" bpdm:providedIsDefault="true" bpdm:clientTasks="_niFMIG2iEeW6zpQBljhuSQ:_RcCsoG2jEeW6zpQBljhuSQ, _niFMIG2iEeW6zpQBljhuSQ:_U3vXcG2jEeW6zpQBljhuSQ" bpdm:isManaged="true" bpdm:otherPoolId="_SNXzAG2PEeWGi5jN4fE-Kg"/>
+        </bpel:partnerLinks>
+        <bpel:variables xmlns:xvar="http://ode.apache.org/externalVariables">
+            <bpel:variable name="thisMSG1Request" messageType="this:MSG1Request" bpdm:id="_RcW1sG2jEeW6zpQBljhuSQ" bpdm:messageIds="inc:_RcL2kG2jEeW6zpQBljhuSQ"/>
+            <bpel:variable name="thisMSG1Response" messageType="this:MSG1Response" bpdm:id="_Yu3aAG2jEeW6zpQBljhuSQ" bpdm:messageIds=" out:_YuxTYG2jEeW6zpQBljhuSQ">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="this:MSG1Response" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="GrowthMetric" element="People:GrowthMetric" xvar:id="GrowthMetric-_WVO9QG2wEeW6zpQBljhuSQ" xvar:relates-to="GrowthMetric-keys" bpdm:xvarType="People:GrowthMetric" bpdm:id="_WVO9QG2wEeW6zpQBljhuSQ"/>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask eventType="start: message" operation="MSG1" partnerLink="data_ProcssAndStartPlkVar" portType="this:ForStart" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="MSG1" bpdm:ID="_RcCsoG2jEeW6zpQBljhuSQ">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisMSG1Request" bpdm:msgVarScopeId="_niFMIG2iEeW6zpQBljhuSQ" bpdm:variableIsManaged="true" bpdm:messageType="this:MSG1Request" bpdm:ID="_RcL2kG2jEeW6zpQBljhuSQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Insert in database" bpdm:ID="_tW0x8G2iEeW6zpQBljhuSQ">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$thisMSG1Request.body/tns:Region</bpel:from>
+                        <bpel:to>$GrowthMetric/People:Region</bpel:to><mapper:mapperLink><mapper:vertice id="416279314" targetPath="$GrowthMetric/People:Region" targetedBy="1062338706-arg0"></mapper:vertice><mapper:vertice id="1062338706" sourcePath="$thisMSG1Request.body/tns:Region"></mapper:vertice></mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$thisMSG1Request.body/tns:Growth</bpel:from>
+                        <bpel:to>$GrowthMetric/People:Growth</bpel:to><mapper:mapperLink><mapper:vertice id="1312148521" targetPath="$GrowthMetric/People:Growth" targetedBy="512311534-arg0"></mapper:vertice><mapper:vertice id="512311534" sourcePath="$thisMSG1Request.body/tns:Growth"></mapper:vertice></mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask eventType="end: message" operation="MSG1" partnerLink="data_ProcssAndStartPlkVar" portType="this:ForStart" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="End Event" bpdm:ID="_U3vXcG2jEeW6zpQBljhuSQ">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>"Good, Job is finished now."</bpel:from>
+                        <bpel:to>$thisMSG1Response.body/text()</bpel:to><mapper:mapperLink><mapper:vertice id="1896726095" targetPath="$thisMSG1Response.body/text()" targetedBy="362613149-arg0"></mapper:vertice><mapper:vertice id="362613149" dimension="156x24" location="352,121"><mapper:value>"Good, Job is finished now."</mapper:value></mapper:vertice></mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisMSG1Response" bpdm:msgVarScopeId="_niFMIG2iEeW6zpQBljhuSQ" bpdm:variableIsManaged="true" bpdm:messageType="this:MSG1Response" bpdm:ID="_YuxTYG2jEeW6zpQBljhuSQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

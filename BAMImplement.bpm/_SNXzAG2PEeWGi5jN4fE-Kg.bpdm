@@ -1,0 +1,33 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:this="http://thisdiagram/Start" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://www.example.org/message" xmlns:Data_Procss="http://thisdiagram/Data_Procss" xmlns:diag="http://thisdiagram" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Start">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Start" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.example.org/message" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///Schemas/message.xsd"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Data_Procss" bpdm:prefix="Data_Procss" bpdm:comment="contrib=&apos;partner-pool:///_niFMIG2iEeW6zpQBljhuSQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_niFMIG2iEeW6zpQBljhuSQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_niFMIG2iEeW6zpQBljhuSQ" bpdm:label="Data Procss"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Schemas/message.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="Start" bpdm:ID="_SNXzAG2PEeWGi5jN4fE-Kg">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="data_ProcssAndStartPlkVar" partnerLinkType="diag:Data_ProcssAndStart" initializePartnerRole="yes" partnerRole="Data_Procss_for_Start" bpdm:invokedService="Data_Procss:CanonicServiceForStart" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Data_Procss/Start" bpdm:invokedIsDefault="true" bpdm:clientTasks="_SNXzAG2PEeWGi5jN4fE-Kg:_SNgV4G2PEeWGi5jN4fE-Kg" bpdm:isManaged="true" bpdm:otherPoolId="_niFMIG2iEeW6zpQBljhuSQ"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="data_ProcssReceiveRequestMsg" messageType="Data_Procss:MSG1Request" bpdm:messageIds=" out:_RcL2kG2jEeW6zpQBljhuSQ">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="Data_Procss:MSG1Request" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="thisTaskRequestMsg" messageType="Data_Procss:MSG1Response" bpdm:messageIds="inc:_YuxTYG2jEeW6zpQBljhuSQ"/>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="MSG1" partnerLink="data_ProcssAndStartPlkVar" portType="Data_Procss:ForStart" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Task" bpdm:ID="_SNgV4G2PEeWGi5jN4fE-Kg">
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="data_ProcssReceiveRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="Data_Procss:MSG1Request" bpdm:ID="_RcL2kG2jEeW6zpQBljhuSQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="thisTaskRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="Data_Procss:MSG1Response" bpdm:ID="_YuxTYG2jEeW6zpQBljhuSQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>
